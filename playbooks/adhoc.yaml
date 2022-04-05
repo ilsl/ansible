@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: true
+ 
+#  vars:
+#    ansible_python_interpreter: /usr/local/bin/python3
+  roles:
+    - adhoc

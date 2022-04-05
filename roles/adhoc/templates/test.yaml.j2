@@ -1,0 +1,8 @@
+ldap:
+{% if ldap | length > 0 %}
+  enabled: true
+  superUserGroup: "{{ ldap.admin_group }}"
+  userGroup: "{{ ldap.group }}"
+{% else %}
+  enabled: false
+{% endif %}

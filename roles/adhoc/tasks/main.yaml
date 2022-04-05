@@ -1,0 +1,9 @@
+- name: Set facts
+  run_once: yes
+  delegate_to: 127.0.0.1
+  block:
+    - set_fact:
+        app: "test"
+        env: "dev"
+        common_tasks_path: "{{ role_path }}/../common-tasks"
+        ci_path: "{{ role_path }}/../ci-tests"
